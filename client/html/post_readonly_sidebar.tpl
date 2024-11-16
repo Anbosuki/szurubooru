@@ -56,8 +56,6 @@
 
         <section class='search'>
             Search on
-            <a href='https://iqdb.org/?url=<%- encodeURIComponent(ctx.post.fullContentUrl) %>' target='_blank'>IQDB</a> &middot;
-            <a href='https://saucenao.com/search.php?db=999&dbmaski=32768&url=<%- encodeURIComponent(ctx.post.fullContentUrl) %>' target='_blank'>SauceNAO</a> &middot;
             <a href='https://lens.google.com/uploadbyurl?url=<%- encodeURIComponent(ctx.post.fullContentUrl) %>' target='_blank'>Google Images</a>
         </section>
 
