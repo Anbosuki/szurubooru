@@ -185,6 +185,12 @@ class PostUploadView extends events.EventTarget {
             this._evtFormSubmit(e)
         );
         this._formNode.classList.add("inactive");
+
+        ['safe', 'sketchy', 'unsafe'].forEach(rating => {
+            document.querySelector(`input#bulk-mark-${rating}`)?.addEventListener('click', () => {
+                document.querySelectorAll(`input[value=${rating}]`).forEach(field => field.click());
+            });
+        });
     }
 
     enableForm() {
