@@ -19,7 +19,7 @@
                     'application/x-shockwave-flash': 'SWF',
                 }[ctx.post.mimeType] %><!--
             --></a>
-            (<%- ctx.post.canvasWidth %>x<%- ctx.post.canvasHeight %>)
+            (<%- ctx.post.canvasWidth %>Wx<%- ctx.post.canvasHeight %>H)
             <% if (ctx.post.flags.length) { %><!--
                 --><% if (ctx.post.flags.includes('loop')) { %><i class='fa fa-repeat'></i><% } %><!--
                 --><% if (ctx.post.flags.includes('sound')) { %><i class='fa fa-volume-up'></i><% } %>
@@ -56,9 +56,9 @@
 
         <section class='search'>
             Search on
-            <a href='http://iqdb.org/?url=<%- encodeURIComponent(ctx.post.fullContentUrl) %>'>IQDB</a> &middot;
-            <a href='https://danbooru.donmai.us/posts?tags=md5:<%- ctx.post.checksumMD5 %>'>Danbooru</a> &middot;
-            <a href='https://lens.google.com/uploadbyurl?url=<%- encodeURIComponent(ctx.post.fullContentUrl) %>'>Google Images</a>
+            <a href='https://iqdb.org/?url=<%- encodeURIComponent(ctx.post.fullContentUrl) %>' target='_blank'>IQDB</a> &middot;
+            <a href='https://saucenao.com/search.php?db=999&dbmaski=32768&url=<%- encodeURIComponent(ctx.post.fullContentUrl) %>' target='_blank'>SauceNAO</a> &middot;
+            <a href='https://lens.google.com/uploadbyurl?url=<%- encodeURIComponent(ctx.post.fullContentUrl) %>' target='_blank'>Google Images</a>
         </section>
 
         <section class='social'>

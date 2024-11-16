@@ -9,6 +9,7 @@ from szurubooru import db
 from szurubooru.func import util
 from szurubooru.rest import context, errors, middleware, routes
 
+cgi.maxlen = 10737418240
 
 def _json_serializer(obj: Any) -> str:
     """JSON serializer for objects not serializable by default JSON code"""
